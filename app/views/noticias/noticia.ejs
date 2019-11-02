@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>Noticia</title>
+
+    <!-- Bootstrap - link cdn -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link href="/css/style.css" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+  </head>
+  <body>
+	  
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarToggler"
+        aria-controls="navbarToggler"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container" id="navbarToggler">
+        <div class="collapse navbar-collapse">
+          <a class="navbar-brand"></a>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <img src="/images/logo.png" />
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/formulario_inclusao_noticia">Formulario Adicionar Notícias </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/noticias">Ver todas Notícias</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 style="color: #fff;">Notícia</h1>
+          <div class="noticia_wrapper">
+            <span class="noticia_autor"><%= noticia[0].autor %></span>
+		    			<a class="noticia_titulo"><%= noticia[0].titulo %></a>
+		    			<span class="noticia_data"><%= noticia[0].data_noticia %></span>
+		    			<p class="noticia_resumo">
+		    				<%= noticia[0].resumo %>
+		    			</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JQuery -->
+    <script src="/js/jquery-3.4.1.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+	></script>
+	
+  </body>
+</html>
